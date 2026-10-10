@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #252942;
+  background: #f6f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  --tf-ink: #252942;
+  --tf-muted: #747b91;
+  --tf-line: #e6e8f0;
+  --tf-surface: #ffffff;
+  --tf-canvas: #f6f7fb;
+  --tf-indigo: #4f46e5;
+  --tf-blue: #2563eb;
+  --tf-violet: #7c3aed;
+  --tf-green: #16846a;
+  --tf-red: #c24152;
+  --tf-shadow: 0 10px 28px rgba(34, 40, 80, 0.055);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--tf-canvas);
+  color: var(--tf-ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
