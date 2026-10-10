@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ProjectCard from '../components/ProjectCard';
 import { apiService } from '../services/api';
 import { useAuth } from '../context/AuthContext';
@@ -8,6 +8,7 @@ import { FolderPlus, Plus } from 'lucide-react';
 
 export default function MyProjectsPage() {
   const { auth } = useAuth();
+  const navigate = useNavigate();
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -34,7 +35,7 @@ export default function MyProjectsPage() {
       <div className="row g-3">
         {projects.map((project) => (
           <div className="col-lg-6" key={project.id}>
-            <ProjectCard project={project} onSelect={() => { window.location.href = `/student/projects/${project.id}`; }} />
+            <ProjectCard project={project} onSelect={() => navigate(`/student/projects/${project.id}`)} />
           </div>
         ))}
       </div>
